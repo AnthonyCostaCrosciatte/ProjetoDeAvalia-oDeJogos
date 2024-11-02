@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #2e2e2e;
+}
+
+.barra-pesquisa input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border-color: #0f0;
+}
+
+.barra-pesquisa button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f0;
+    color: #000000;
+    cursor: pointer;
+}
+
+.cabecalho h1 {
+    color: #07ff07;
+    font-size: 24px;
+}
+
+.btn-login {
+    padding: 8px 12px;
+    background-color: #0f0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Contêiner de jogos */
+.lista-jogos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 600px; /* Limite de largura para centralizar */
+    margin: 0 auto; /* Centraliza a lista */
+}
+
+.cartao-jogo {
+    width: 100%; /* Ajusta a largura do cartão ao contêiner */
+    max-width: 250px; /* Define a largura máxima para manter proporção */
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cartao-jogo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cartao-jogo h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cartao-jogo p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.btn-avaliar {
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #0f0;
+    border: 1px solid #0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    color: #0f0;
+}
+
+.paginacao a {
+    color: #0f0;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.paginacao a:hover {
+    text-decoration: underline;
+}
