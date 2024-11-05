@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    color: #00ff00; /* Cor do texto em verde */
+  }
+  
+  .top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  .top-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .search-input {
+    background-color: #1e1e1e;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+  
+  .search-button {
+    background-color: #1e1e1e;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-button img {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f0;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .container {
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    color: #00ff00; 
+  }
+  
+  .image-label, .text-label {
+    color: #00ff00;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .game-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00ff00;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    color: #00ff00;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #00ff00;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #00ff00;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1e1e1e;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #00cc00;
+  }
+  
