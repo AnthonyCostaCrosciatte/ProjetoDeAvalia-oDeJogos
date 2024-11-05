@@ -8,9 +8,11 @@
 </head>
 <body>
   <div class="top-bar">
-    <input type="text" placeholder="Value" class="search-input">
-    <button class="search-button">🔍</button>
-    <img src="images-removebg-preview.png" alt="Ícone do Usuário" class="user-icon"> <!-- Ícone de usuário à direita -->
+    <div class="search">
+      <input type="text" placeholder="Value">
+      <button>🔍</button>
+    </div>
+    <img src="images-removebg-preview.png" alt="Ícone do Usuário" class="user-icon">
   </div>
   <div class="container">
     <img src="God_of_War_II_.png" alt="God of War 2" class="game-image">
