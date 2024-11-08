@@ -15,47 +15,43 @@ try {
 }
 
 // Função para fazer o upload da imagem do avatar
-function fazerUploadAvatar($arquivo)
-{
-    // Verificar se o arquivo foi enviado corretamente
+// Diretório para salvar as imagens
+$upload_dir = 'uploads/';
+
+// Função para fazer o upload da imagem
+function fazerUploadAvatar($arquivo) {
+    // Verifica se o arquivo foi enviado corretamente
     if ($arquivo['error'] === UPLOAD_ERR_OK) {
-        // Obter a extensão do arquivo
+        // Obtém a extensão do arquivo
         $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
 
-        // Definir o diretório onde as imagens serão armazenadas
-        $diretorioAvatares = 'avatars/';
-
-        // Criar o diretório se não existir
-        if (!is_dir($diretorioAvatares)) {
-            mkdir($diretorioAvatares, 0777, true);  // Permissões para criar a pasta
+        // Verifica se a extensão é permitida
+        $permitidas = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array($extensao, $permitidas)) {
+            return "Somente imagens JPG, JPEG, PNG e GIF são permitidas.";
         }
 
-        // Gerar um nome único para o arquivo
-        $nomeAvatar = uniqid() . '.' . $extensao;
+        // Gera um nome único para o arquivo
+        $novoNome = uniqid() . '.' . $extensao;
 
-        // Tipos permitidos de arquivos
-        $tiposPermitidos = ['jpg', 'jpeg', 'png', 'gif'];
+        // Caminho completo do arquivo no servidor
+        $caminhoCompleto = $upload_dir . $novoNome;
 
-        // Verificar se a extensão do arquivo é permitida
-        if (in_array($extensao, $tiposPermitidos)) {
-            // Mover o arquivo para o diretório de avatares
-            if (move_uploaded_file($arquivo['tmp_name'], $diretorioAvatares . $nomeAvatar)) {
-                // Retornar o caminho do arquivo no servidor
-                return $diretorioAvatares . $nomeAvatar;
-            } else {
-                return "Erro ao mover o arquivo para o servidor.";
-            }
+        // Move o arquivo para o diretório de uploads
+        if (move_uploaded_file($arquivo['tmp_name'], $caminhoCompleto)) {
+            // Retorna apenas o nome do arquivo para ser salvo no banco
+            return $novoNome;
         } else {
-            return "Somente imagens JPG, JPEG, PNG e GIF são permitidas.";
+            return "Erro ao mover o arquivo.";
         }
     } else {
         return "Erro no envio do arquivo.";
     }
 }
 
-// Verificar se o formulário foi submetido
+// Verifica se o formulário foi submetido
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obter os dados do formulário
+    // Obtém os dados do formulário
     $nomeUsuario = $_POST['nome'];
     $emailUsuario = $_POST['email'];
     $senhaUsuario = password_hash($_POST['senha'], PASSWORD_DEFAULT);  // Criptografar a senha
@@ -64,6 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $caminhoAvatar = "";
     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
         $caminhoAvatar = fazerUploadAvatar($_FILES['avatar']);
+        if (strpos($caminhoAvatar, 'Erro') !== false) {
+            // Se houver erro no upload da imagem, podemos mostrar a mensagem de erro
+            echo $caminhoAvatar;
+            exit;
+        }
     }
 
     // Inserir os dados no banco de dados
@@ -77,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Executar a consulta
     if ($stmt->execute()) {
         echo "Usuário cadastrado com sucesso!";
+        
     } else {
         echo "Erro ao cadastrar usuário.";
     }
@@ -93,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <div class="avatar">
+            <!-- Exibe a imagem do avatar -->
             <img src="images-removebg-preview.png" alt="Avatar" class="avatar-image">
             <label class="carregar" for="avatar">Carregar avatar</label>
             <input type="file" id="avatar" name="avatar" accept="image/*" style="display: none;" required>
