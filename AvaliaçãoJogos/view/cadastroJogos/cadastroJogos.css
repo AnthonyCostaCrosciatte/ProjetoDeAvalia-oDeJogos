@@ -1,0 +1,130 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #0f0;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #0f0;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .icons button{
+    background-color: #000;
+    border: solid #000;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  .form-jogo {
+    background-color: #111;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .upload-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .upload-frame {
+    width: 150px;
+    height: 150px;
+    background-color: #0f0;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .upload-icon {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .btn-upload {
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input, .input-group textarea {
+    width: 100%;
+    max-width: 530px;
+    padding: 10px;
+    border: 2px solid #0f0;
+    background-color: #000;
+    color: #0f0;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .btn-enviar {
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+  }
+  
