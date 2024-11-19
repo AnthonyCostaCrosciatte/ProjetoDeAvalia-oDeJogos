@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img src="imagemEmpresa.jpg" alt="Logo">
+                <img src="./view/visualizacao/img/imagemEmpresa.jpg" alt="Logo">
             </div>
             <nav>
                 <a href="#">Início</a>
@@ -25,7 +25,7 @@
         </header>
 
         <div class="content">
-            <img src="God_of_War_II_.png" alt="God of War">
+            <img src="./view/visualizacao/img/God_of_War_II_.png" alt="God of War">
             <div class="info">
                 <p><strong>Nome:</strong> God of War II</p>
                 <p><strong>Lançamento:</strong> 13/03/2007</p>

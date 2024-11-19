@@ -9,26 +9,26 @@
 <body>
   <header>
     <div class="logo">
-        <img src="shape.png" alt="">
+        <img src="./view/cadastroJogos/img/shape.png" alt="">
     </div>
     
     <div class="icons">
-      <button><img src="icon.png" alt="" style="width: 20px; height: 20px;"></button>
-      <button><img src="Avatar.png" alt="" style="width: 25px; height: 25px;"></button>
+      <button><img src="./view/cadastroJogos/img/Icon.png" alt="" style="width: 20px; height: 20px;"></button>
+      <button><img src="./view/cadastroJogos/img/Avatar.png" alt="" style="width: 25px; height: 25px;"></button>
     </div>
   </header>
   <br>
   <nav>
-      <a href="#">Início</a>
-      <a href="#">Ranking</a>
-      <a href="cadastroJogos.php">Cadastrar Jogos</a>
+      <a href="index.php">Início</a>
+      <a href="./view/ranking/ranking.php">Ranking</a>
+      <a href="./view/cadastroJogos/cadastroJogos.php">Cadastrar Jogos</a>
     </nav>
 
   <div class="container">
     <form class="form-jogo">
       <div class="upload-section">
         <div class="upload-frame">
-            <img src="Frame.png" alt="" class="upload-icon">
+            <img src="./view/cadastroJogos/img/Frame.png" alt="" class="upload-icon">
         </div>
         <button type="button" class="btn-upload">Carregar imagem do jogo</button>
       </div>

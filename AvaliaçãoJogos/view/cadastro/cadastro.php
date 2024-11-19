@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <div class="avatar">
             <!-- Exibe a imagem do avatar -->
-            <img src="images-removebg-preview.png" alt="Avatar" class="avatar-image">
+            <img src="./view/cadastro/img/images-removebg-preview.png" alt="Avatar" class="avatar-image">
             <label class="carregar" for="avatar">Carregar avatar</label>
             <input type="file" id="avatar" name="avatar" accept="image/*" style="display: none;" required>
         </div>

@@ -36,6 +36,7 @@ body {
   .icons button{
     background-color: #000;
     border: solid #000;
+    cursor: pointer;
   }
   
   .container {
