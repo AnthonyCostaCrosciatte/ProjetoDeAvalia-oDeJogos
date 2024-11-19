@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="login-container">
         <div class="profile-icon">
-            <img src="./view/Login/img/images-removebg-preview.png" alt="Ícone do perfil">
+            <img src="img/images-removebg-preview.png" alt="Ícone do perfil">
         </div>
         <form class="login-form" method="POST" action="login.php">
             <label for="email">Email</label>

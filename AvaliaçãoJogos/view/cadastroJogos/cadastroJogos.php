@@ -9,12 +9,12 @@
 <body>
   <header>
     <div class="logo">
-        <img src="./view/cadastroJogos/img/shape.png" alt="">
+        <img src="img/shape.png" alt="">
     </div>
     
     <div class="icons">
-      <button><img src="./view/cadastroJogos/img/Icon.png" alt="" style="width: 20px; height: 20px;"></button>
-      <button><img src="./view/cadastroJogos/img/Avatar.png" alt="" style="width: 25px; height: 25px;"></button>
+      <button><img src="img/Icon.png" alt="" style="width: 20px; height: 20px;"></button>
+      <button><img src="img/Avatar.png" alt="" style="width: 25px; height: 25px;"></button>
     </div>
   </header>
   <br>
@@ -28,7 +28,7 @@
     <form class="form-jogo">
       <div class="upload-section">
         <div class="upload-frame">
-            <img src="./view/cadastroJogos/img/Frame.png" alt="" class="upload-icon">
+            <img src="img/Frame.png" alt="" class="upload-icon">
         </div>
         <button type="button" class="btn-upload">Carregar imagem do jogo</button>
       </div>

@@ -12,10 +12,10 @@
       <input type="text" placeholder="Value">
       <button>🔍</button>
     </div>
-    <img src="./view/avaliacao/img/images-removebg-preview.png" alt="Ícone do Usuário" class="user-icon">
+    <img src="img/images-removebg-preview.png" alt="Ícone do Usuário" class="user-icon">
   </div>
   <div class="container">
-    <img src="./view/avaliacao/img/God_of_War_II_.png" alt="God of War 2" class="game-image">
+    <img src="img/God_of_War_II_.png" alt="God of War 2" class="game-image">
     <h1>God of War 2</h1>
     <h2>Santa Monica Studio</h2>
     <p>
